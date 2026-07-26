@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta
+      name="description"
+      content="MirrorX (Sathish) - Full Stack Developer, Designer & Discord Bot Developer Portfolio"
+    />
+    <title>MirrorX | Sathish</title>
+
+    <!-- Google Fonts - Unique Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Chakra+Petch:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Visitor Counter Badge -->
+    <div class="visitor-badge" id="visitorBadge">
+      <i class="fas fa-eye"></i>
+      <span id="visitorCount">0</span>
+      <small>visitors</small>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Mirror</span
+        ><span class="logo-highlight">X</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a href="#home" class="nav-link active" data-section="home">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link" data-section="about">About</a>
+        </li>
+        <li>
+          <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        </li>
+        <li>
+          <a href="#advantages" class="nav-link" data-section="advantages"
+            >Advantages</a
+          >
+        </li>
+        <li>
+          <a href="#projects" class="nav-link" data-section="projects"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="glitch-container">
+          <p class="hero-greeting">
+            <span class="typing-text" id="typingGreeting"></span>
+            <span class="cursor-blink"></span>
+          </p>
+          <h1 class="hero-name glitch" data-text="MirrorX">MirrorX</h1>
+          <p class="hero-realname">
+            <span class="highlight">Sathish</span>
+          </p>
+        </div>
+        <div class="hero-titles">
+          <div class="title-rotator">
+            <span id="rotatingTitle"></span>
+            <span class="title-cursor">_</span>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Contact Me</span>
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a
+            href="https://github.com/mirrorx07-git"
+            target="_blank"
+            class="social-icon"
+            data-tooltip="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://discord.gg/PdvpgY5Hp2"
+            target="_blank"
+            class="social-icon"
+            data-tooltip="Discord"
+          >
+            <i class="fab fa-discord"></i>
+          </a>
+          <a
+            href="https://x.com/_mirror_x_07"
+            target="_blank"
+            class="social-icon"
+            data-tooltip="X"
+          >
+            <i class="fab fa-x"></i>
+          </a>
+          <a
+            href="https://instagram.com/_mirror_.x"
+            target="_blank"
+            class="social-icon"
+            data-tooltip="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://youtube.com/@sathishxmirror07"
+            target="_blank"
+            class="social-icon"
+            data-tooltip="YouTube"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sathish-s-6b7bb2377?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank"
+            class="social-icon"
+            data-tooltip="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mirrorxofficial.07@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            data-tooltip="Email"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hex-frame">
+          <div class="hex-border"></div>
+          <div class="profile-placeholder">
+            <span class="profile-initials">MX</span>
+          </div>
+          <div class="hex-orbit"></div>
+          <div class="hex-orbit hex-orbit-2"></div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <p>Scroll Down</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="section-header">
+        <span class="section-tag">&lt;about&gt;</span>
+        <h2 class="section-title">About <span class="highlight">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">mirrorx@portfolio:~</span>
+          </div>
+          <div class="terminal-body">
+            <p class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command">cat about.txt</span>
+            </p>
+            <p class="terminal-output">
+              Hey there! I'm <span class="highlight">Sathish</span>, known
+              online as <span class="highlight">MirrorX</span>. I'm a passionate
+              <span class="highlight">Full Stack Developer</span>,
+              <span class="highlight">Graphics Designer</span>,
+              <span class="highlight">Video Editor</span>, and
+              <span class="highlight">Discord Bot Developer</span>.
+            </p>
+            <p class="terminal-output">
+              I craft digital experiences from front-end interfaces to back-end
+              systems, design stunning visuals, edit cinematic videos, and build
+              powerful Discord bots that automate and elevate communities.
+            </p>
+            <p class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command">echo $SPECIALTIES</span>
+            </p>
+            <p class="terminal-output">
+              Portrait & Photo Editing | Frontend & Backend Development |
+              Discord Automation | UI/UX Design | Bot Development
+            </p>
+            <p class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="cursor-blink">|</span>
+            </p>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-code"></i></div>
+            <div class="stat-number" data-count="50">0</div>
+            <div class="stat-label">Projects Done</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-robot"></i></div>
+            <div class="stat-number" data-count="15">0</div>
+            <div class="stat-label">Bots Built</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-palette"></i></div>
+            <div class="stat-number" data-count="100">0</div>
+            <div class="stat-label">Designs Created</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-film"></i></div>
+            <div class="stat-number" data-count="30">0</div>
+            <div class="stat-label">Videos Edited</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="section-header">
+        <span class="section-tag">&lt;skills&gt;</span>
+        <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3 class="category-title">
+            <i class="fas fa-laptop-code"></i> Frontend Development
+          </h3>
+          <div class="skill-grid">
+            <div class="skill-item" data-skill="95">
+              <div class="skill-icon"><i class="fab fa-html5"></i></div>
+              <span>HTML</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="90">
+              <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+              <span>CSS</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="85">
+              <div class="skill-icon"><i class="fab fa-js"></i></div>
+              <span>JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="80">
+              <div class="skill-icon"><i class="fab fa-react"></i></div>
+              <span>React</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title">
+            <i class="fas fa-server"></i> Backend Development
+          </h3>
+          <div class="skill-grid">
+            <div class="skill-item" data-skill="85">
+              <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+              <span>Node.js</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="80">
+              <div class="skill-icon"><i class="fab fa-python"></i></div>
+              <span>Python</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="75">
+              <div class="skill-icon"><i class="fab fa-php"></i></div>
+              <span>PHP</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="80">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <span>MongoDB/MySQL</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title">
+            <i class="fas fa-paint-brush"></i> Design & Editing
+          </h3>
+          <div class="skill-grid">
+            <div class="skill-item" data-skill="90">
+              <div class="skill-icon"><i class="fas fa-image"></i></div>
+              <span>Photoshop</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="85">
+              <div class="skill-icon"><i class="fas fa-video"></i></div>
+              <span>After Effects</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="80">
+              <div class="skill-icon"><i class="fas fa-bezier-curve"></i></div>
+              <span>Light Room</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="85">
+              <div class="skill-icon"><i class="fas fa-portrait"></i></div>
+              <span>Portrait Editing</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title">
+            <i class="fab fa-discord"></i> Discord Development
+          </h3>
+          <div class="skill-grid">
+            <div class="skill-item" data-skill="95">
+              <div class="skill-icon"><i class="fas fa-robot"></i></div>
+              <span>Customized Bot</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="100"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="90">
+              <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+              <span>Bot Moderation</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="85">
+              <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+              <span>Automation</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="88">
+              <div class="skill-icon"><i class="fas fa-music"></i></div>
+              <span>Music Bots</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="68"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     ADVANTAGES SECTION - Add after </section> of skills
+     ========================================== -->
+    <section class="section advantages" id="advantages">
+      <div class="section-header">
+        <span class="section-tag">&lt;advantages&gt;</span>
+        <h2 class="section-title">
+          Why Choose <span class="highlight">Me</span>
+        </h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Main Advantages Grid -->
+      <div class="advantages-grid">
+        <!-- Advantage 1 -->
+        <div class="advantage-card adv-large">
+          <div class="adv-card-inner">
+            <div class="adv-icon-wrap">
+              <div class="adv-icon-ring"></div>
+              <div class="adv-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+            </div>
+            <div class="adv-content">
+              <h3 class="adv-title">All-In-One Creator</h3>
+              <p class="adv-desc">
+                I'm not just a developer or just a designer — I'm both and more.
+                From coding your backend to designing your brand visuals,
+                editing your promo video to setting up your Discord server — you
+                get everything under one roof, saving time and money.
+              </p>
+              <div class="adv-tags">
+                <span>Dev</span>
+                <span>Design</span>
+                <span>Video</span>
+                <span>Discord</span>
+              </div>
+            </div>
+          </div>
+          <div class="adv-card-glow"></div>
+          <div class="adv-number">01</div>
+        </div>
+
+        <!-- Advantage 2 -->
+        <div class="advantage-card">
+          <div class="adv-card-inner">
+            <div class="adv-icon-wrap">
+              <div class="adv-icon-ring"></div>
+              <div class="adv-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+            </div>
+            <div class="adv-content">
+              <h3 class="adv-title">Fast Delivery</h3>
+              <p class="adv-desc">
+                I deliver projects on time without sacrificing quality.
+                Efficient workflow and sharp focus means you get results fast.
+              </p>
+            </div>
+          </div>
+          <div class="adv-card-glow"></div>
+          <div class="adv-number">02</div>
+        </div>
+
+        <!-- Advantage 3 -->
+        <div class="advantage-card">
+          <div class="adv-card-inner">
+            <div class="adv-icon-wrap">
+              <div class="adv-icon-ring"></div>
+              <div class="adv-icon">
+                <i class="fas fa-paint-roller"></i>
+              </div>
+            </div>
+            <div class="adv-content">
+              <h3 class="adv-title">Unique & Custom Designs</h3>
+              <p class="adv-desc">
+                No templates. No copy-paste. Every project I build is crafted
+                from scratch with a unique identity tailored just for you.
+              </p>
+            </div>
+          </div>
+          <div class="adv-card-glow"></div>
+          <div class="adv-number">03</div>
+        </div>
+
+        <!-- Advantage 4 -->
+        <div class="advantage-card">
+          <div class="adv-card-inner">
+            <div class="adv-icon-wrap">
+              <div class="adv-icon-ring"></div>
+              <div class="adv-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+            </div>
+            <div class="adv-content">
+              <h3 class="adv-title">24/7 Support</h3>
+              <p class="adv-desc">
+                I'm always reachable. Got an issue at midnight? Drop a message
+                on Discord or email — I respond quickly and ensure your project
+                keeps running.
+              </p>
+            </div>
+          </div>
+          <div class="adv-card-glow"></div>
+          <div class="adv-number">04</div>
+        </div>
+
+        <!-- Advantage 5 -->
+        <div class="advantage-card">
+          <div class="adv-card-inner">
+            <div class="adv-icon-wrap">
+              <div class="adv-icon-ring"></div>
+              <div class="adv-icon">
+                <i class="fas fa-shield-halved"></i>
+              </div>
+            </div>
+            <div class="adv-content">
+              <h3 class="adv-title">Clean & Secure Code</h3>
+              <p class="adv-desc">
+                Every line of code I write is clean, optimized, and secure. No
+                spaghetti code — maintainable, scalable, and bug-free builds.
+              </p>
+            </div>
+          </div>
+          <div class="adv-card-glow"></div>
+          <div class="adv-number">05</div>
+        </div>
+
+        <!-- Advantage 6 -->
+        <div class="advantage-card">
+          <div class="adv-card-inner">
+            <div class="adv-icon-wrap">
+              <div class="adv-icon-ring"></div>
+              <div class="adv-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+            </div>
+            <div class="adv-content">
+              <h3 class="adv-title">Discord Specialist</h3>
+              <p class="adv-desc">
+                One of the few developers who deeply specializes in Discord
+                ecosystems — from automation bots to full server setups and
+                music systems.
+              </p>
+            </div>
+          </div>
+          <div class="adv-card-glow"></div>
+          <div class="adv-number">06</div>
+        </div>
+
+        <!-- Advantage 7 -->
+        <div class="advantage-card">
+          <div class="adv-card-inner">
+            <div class="adv-icon-wrap">
+              <div class="adv-icon-ring"></div>
+              <div class="adv-icon">
+                <i class="fas fa-mobile-screen"></i>
+              </div>
+            </div>
+            <div class="adv-content">
+              <h3 class="adv-title">Fully Responsive</h3>
+              <p class="adv-desc">
+                Every website I build works flawlessly on all devices — desktop,
+                tablet, and mobile. Pixel-perfect on every screen size.
+              </p>
+            </div>
+          </div>
+          <div class="adv-card-glow"></div>
+          <div class="adv-number">07</div>
+        </div>
+
+        <!-- Advantage 8 -->
+        <div class="advantage-card">
+          <div class="adv-card-inner">
+            <div class="adv-icon-wrap">
+              <div class="adv-icon-ring"></div>
+              <div class="adv-icon">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+            </div>
+            <div class="adv-content">
+              <h3 class="adv-title">Client-First Mindset</h3>
+              <p class="adv-desc">
+                Your vision is my mission. I listen carefully, communicate
+                clearly, and make sure you're 100% satisfied before calling it
+                done.
+              </p>
+            </div>
+          </div>
+          <div class="adv-card-glow"></div>
+          <div class="adv-number">08</div>
+        </div>
+      </div>
+
+      <!-- Bottom Power Bar -->
+      <div class="power-bar">
+        <div class="power-bar-title">
+          <i class="fas fa-chart-line"></i>
+          Overall Excellence Rate
+        </div>
+        <div class="power-metrics">
+          <div class="power-metric">
+            <span class="metric-label">Code Quality</span>
+            <div class="metric-bar">
+              <div
+                class="metric-fill"
+                data-width="95"
+                style="--fill-color: #00f0ff"
+              ></div>
+            </div>
+            <span class="metric-value">95%</span>
+          </div>
+          <div class="power-metric">
+            <span class="metric-label">Client Satisfaction</span>
+            <div class="metric-bar">
+              <div
+                class="metric-fill"
+                data-width="98"
+                style="--fill-color: #bf00ff"
+              ></div>
+            </div>
+            <span class="metric-value">98%</span>
+          </div>
+          <div class="power-metric">
+            <span class="metric-label">On-Time Delivery</span>
+            <div class="metric-bar">
+              <div
+                class="metric-fill"
+                data-width="92"
+                style="--fill-color: #00ff88"
+              ></div>
+            </div>
+            <span class="metric-value">92%</span>
+          </div>
+          <div class="power-metric">
+            <span class="metric-label">Design Uniqueness</span>
+            <div class="metric-bar">
+              <div
+                class="metric-fill"
+                data-width="97"
+                style="--fill-color: #ff006e"
+              ></div>
+            </div>
+            <span class="metric-value">97%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="section-header">
+        <span class="section-tag">&lt;projects&gt;</span>
+        <h2 class="section-title">
+          My <span class="highlight">Projects</span>
+        </h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="bot">Discord Bots</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="tool">Tools</button>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-category="bot">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+          </div>
+          <h3 class="project-title">Server Automation Bot</h3>
+          <p class="project-desc">
+            Advanced Discord bot for complete server automation including
+            auto-roles, welcome systems, logging, and custom commands.
+          </p>
+          <div class="project-tech">
+            <span>Discord.js</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="bot">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-gavel"></i>
+            </div>
+          </div>
+          <h3 class="project-title">Moderation Bot</h3>
+          <p class="project-desc">
+            Powerful moderation bot with anti-spam, auto-mod, warning system,
+            temp-ban, mute, and comprehensive audit logging.
+          </p>
+          <div class="project-tech">
+            <span>Discord.js</span>
+            <span>Python</span>
+            <span>MySQL</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="bot">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-music"></i>
+            </div>
+          </div>
+          <h3 class="project-title">Music Bot</h3>
+          <p class="project-desc">
+            Feature-rich music bot supporting YouTube, Spotify, SoundCloud with
+            queue management, filters, and 24/7 playback.
+          </p>
+          <div class="project-tech">
+            <span>Discord.js</span>
+            <span>Lavalink</span>
+            <span>Node.js</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="web tool">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-qrcode"></i>
+            </div>
+          </div>
+          <h3 class="project-title">QR & Barcode Generator</h3>
+          <p class="project-desc">
+            Web application to generate custom QR codes and barcodes generation.
+          </p>
+          <div class="project-tech">
+            <span>HTML/CSS</span>
+            <span>JavaScript</span>
+            <span>API</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="web">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+          </div>
+          <h3 class="project-title">Store Billing System</h3>
+          <p class="project-desc">
+            Complete billing website for retail stores with inventory
+            management, invoice generation, tax calculation, and sales reports.
+          </p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-category="web">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+          </div>
+          <h3 class="project-title">Portfolio Websites</h3>
+          <p class="project-desc">
+            Custom-designed portfolio websites for clients with unique
+            animations, responsive design, and modern UI/UX principles.
+          </p>
+          <div class="project-tech">
+            <span>HTML/CSS</span>
+            <span>JavaScript</span>
+            <span>GSAP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="section-header">
+        <span class="section-tag">&lt;contact&gt;</span>
+        <h2 class="section-title">
+          Get In <span class="highlight">Touch</span>
+        </h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Let's Work Together</h3>
+          <p>
+            Have a project in mind? Want a custom Discord bot or a stunning
+            website? Drop me a message and I'll get back to you!
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=mirrorxofficial.07@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="email-link"
+                  >
+                    mirrorxofficial.07@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-discord"></i></div>
+              <div>
+                <h4>Discord</h4>
+                <p>
+                  <a
+                    href="https://discord.com/users/1197152034458173512"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="email-link"
+                  >
+                    mirror_x_07
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>
+                  <a
+                    href="https://www.google.com/maps/place/Coimbatore,+Tamil+Nadu,+India"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="email-link"
+                  >
+                    Coimbatore
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/mirrorx07-git" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://discord.gg/PdvpgY5Hp2" target="_blank"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="https://x.com/_mirror_x_07" target="_blank"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+            <a href="https://instagram.com/_mirror_.x" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://youtube.com/@sathishxmirror07" target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/sathish-s-6b7bb2377?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name"> <i class="fas fa-user"></i> Your Name </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Abc"
+              />
+              <div class="input-line"></div>
+            </div>
+            <div class="form-group">
+              <label for="email">
+                <i class="fas fa-envelope"></i> Your Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="abc@example.com"
+              />
+              <div class="input-line"></div>
+            </div>
+            <div class="form-group">
+              <label for="subject"> <i class="fas fa-tag"></i> Subject </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder="Project Discussion"
+              />
+              <div class="input-line"></div>
+            </div>
+            <div class="form-group">
+              <label for="message">
+                <i class="fas fa-comment-dots"></i> Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Tell me about your project..."
+              ></textarea>
+              <div class="input-line"></div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-submit"
+              id="submitBtn"
+            >
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none">
+                <i class="fas fa-spinner fa-spin"></i> Sending...
+              </span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+          <div class="form-status" id="formStatus"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">Mirror</span
+          ><span class="logo-highlight">X</span>
+          <span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-text">
+          Crafted with
+          <span class="highlight"><i class="fas fa-heart"></i></span> by MirrorX
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com/mirrorx07-git" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://discord.gg/PdvpgY5Hp2" target="_blank"
+            ><i class="fab fa-discord"></i
+          ></a>
+          <a href="https://twitter.com/MirrorX" target="_blank"
+            ><i class="fab fa-x-twitter"></i
+          ></a>
+          <a href="https://instagram.com/_mirror_.x" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+        <p class="footer-copy">&copy; 2025 MirrorX. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
